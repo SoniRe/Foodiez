@@ -1,0 +1,33 @@
+40:48
+
+//Basic code to add Hello World to root element 
+<script>
+      const heading = document.createElement("h1");
+      heading.innerHTML = "Hello world from javascript";
+
+      const root = document.querySelector("#root");
+      root.appendChild(heading)
+ </script>
+
+Browser only understands react and doesn't know react
+
+crossorigin 
+
+react  - it is the main core file
+react-dom - it is used to modify DOM which we will need
+
+Two files are there because react is core file and react-dom is what we need , there are more
+like react-native, react-3d
+
+<script>
+      //we are deriving core things(like and element) which comes from react
+      const heading = React.createElement("h1", {}, "Namaste from react");
+
+      //root is the place where all things will render
+      //we use ReactDOM as its included in DOM part
+      const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+      // now render the heading in root
+      root.render(heading);
+</script>
+

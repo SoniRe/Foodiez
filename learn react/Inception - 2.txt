@@ -1,0 +1,105 @@
+Changes in the DOM is very costly. Every company is trying to improve the efficieny of the program.
+React gives us helper functions that do these operations and are very performant
+
+{} is the place where you give attribute to tag
+
+render() method converts object into HTML element 
+
+createElement() - creates a react element which is just a javascript object
+
+
+    <div id="parent">
+        <div id = "child">
+            <h1>Hello from h1 tag</h1>
+            <h2>Hello from h2 tag</h2>
+        </div>
+    </div>
+
+
+const parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "Im h1 tag"),
+    React.createElement("h2", {}, "Im h2 bro"),
+  ]) // create array of children for siblings
+);
+
+console.log(parent);
+
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+
+root.render(parent); // render the parent element
+
+Difference between Library and Framework ?
+Library - React can work on place you want to work on. example if we want to work on Header it will work on Header only
+	  thats why we can use react. So all libraries are pre-written code that performs specific operations
+
+Framework - Provides a structure for writing a program. 
+
+Why is React called React ?
+React is called "React" because of its core feature, which is its ability to "react" or respond dynamically to changes in data
+
+What is cross-origin in script tag ?
+Setting the attribute name to an empty value, like crossorigin or crossorigin="", is the same as anonymous.
+
+<script
+  src="https://example.com/example-framework.js"
+  crossorigin="anonymous">
+</script>
+
+You can use the following <script> element to tell a browser to execute the https://example.com/example-framework.js script without sending user-credentials.
+
+anonymous - A cross-origin request is performed. No credentials are sent.
+Credentials like (e.g. a cookie, a certificate, a HTTP Basic authentication)
+
+
+What is CORS?
+Cross-Origin Resource Sharing, it is a mechanism for web apps to share resources with different origin
+
+Initially webapps with different origin couldn't share data between them.
+Suppose akshaysaini.in cannot access or request data from another domain or sub-domain or different port like :-
+ - google.com/api/data (Not allowed) (Another domain)
+ - api.akshaysaini.in (Not allowed) (Sub domain)
+ - akshaysaini.in:5505 (Not allowed) (Different Port)
+ - http:akshaysainin.in (Not allowed) (Different Header)
+
+
+How does Cross Origin Request Sharing works behind the scenes?
+
+Now what happens is before a api call, preflight request is made
+Suppose Origin 1 wants to post data to Origin 2. 
+1.) A Pre-flight request will be made then server will verify the request as if it is valid or not
+    then server will send additional http headers back to Origin 1
+2.) Then the actual POST request is made
+
+Here are the additional headers sent by the server
+[ Access-Control-Allow-Origin: * ] - * means Anydomain outside this domain can access this
+[Access-Control-Request-Method: PUT]
+[Access-Control-Request-Headers: Special-Request-Header]
+
+Some request are automatically tag them as simple request by our browser
+
+async vs defer as attributes in script tag 
+
+when you load up web page HTML parsing happens then
+Loading of script occurs meaning downloading scripts from server then executing it line by line
+
+<script src= " " ... /> 
+HTML Parsing
+Fetch the script (HTML Parsing paused)
+Then execute the script
+HTML Parsing Continues
+
+<script async src = " " ... /> (Doesn't guarantee the order of executon of script)
+While HTML parsing is going on scripts are fetched from network asynchronously then after as soon as 
+scripts are downloaded HTML parsing will stop then scripts will be executed
+
+<script defer src = " " ... /> (Guarantees the order of execution of script)
+In defer attribute HTML parsing goes on in parallel with fetching of scripts and are executed only after 
+HTML parsing is completed.
+
+
+
+
+
