@@ -1,0 +1,25 @@
+We don't want to push console.log() or comments into our production app. I want to minify those file
+Do bundling, image optimization and many more things before it goes to production
+
+Many packages with React make it fast
+This package.json file is configuration for npm (in JSON structure). It keeps track of version of packages
+If Our package is dependent on other packages then it is called dependencies. 
+
+The most important package in our app is :
+Bundler(Vite, webpack, parcel)  - Packages our app so that it can be shipped to production
+
+create-react-app uses webpack behind the scenes
+
+There are 2 types of packages we can install:
+1) Dev Dependency (Required in development mode) (use this command -D )
+2) Normal Dependency 
+
+"devDependencies": {
+    "parcel": "^2.10.0"
+ }
+
+Caret(^) - It will install all minor updates
+Tilde(~) - It will install major updates
+
+package.json - It keeps the track of approx version 
+package-lock.json - It keeps the track of exact version
