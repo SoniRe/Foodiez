@@ -1,6 +1,6 @@
 # Namaste React 🚀
 
-## Parcel
+# Parcel
 
 - Dev Build
 - Local Server
@@ -15,4 +15,7 @@
 - Compressing
 - Consistent Hashing
 - Code Splitting
-- Differential Bundling
+- Differential Bundling - support older browsers
+- Host on HTTPS
+- Tree Shaking - Remove Unused code
+- Different dev and production bundles
