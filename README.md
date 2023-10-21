@@ -1,7 +1,6 @@
 # Namaste React 🚀
 
 # Parcel
-
 - Dev Build
 - Local Server
 - HMR = Hot Module Replacement
@@ -13,3 +12,6 @@
 - Minification of file
 - Bundling
 - Compressing
+- Consistent Hashing
+- Code Splitting
+- Differential Bundling
