@@ -1,0 +1,48 @@
+1:31:22
+
+JSX => React.createElement => ReactElement- JS Object => HTML Element(rendered)
+
+Attributes are given in camelCase.If you want to write JSX in multiple lines we wrap it inside () paranthesis
+const jsxHeading = (<h1 className="head">Hello 
+I'm here boy
+</h1>);
+
+
+ React Component
+- Class Based Component - Old ways to build code (It uses Javascript classes)
+- Function Based Component - New way to build code (It uses Javascript functions)
+
+React Functional Component - Just a javascript function (Name it capital letter)
+that returns a React element
+const HeadingComponent = () => {
+  return <h1>Namaste React Functional Component</h1>;
+};
+
+		or
+
+const HeadingComponent = () => <h1>Namaste React Functional Component</h1>;
+
+
+
+const HeadingComponent = () => (
+  <div id="container">
+    <Title />   => This is a component composition meaning component composes another component
+    <h1>Namaste React Functional Component</h1>
+  </div>
+);
+
+Can write in Normal Function format
+const Title = function () {
+  return (
+    <h1 className="head" tabIndex="5">
+      Hello I'm here boy
+    </h1>
+  );
+};
+
+Can Inject JS code into JSX code
+
+Cross-side scripting - an attack in which an attacker injects malicious executable scripts into the code 
+			of a trusted application or website
+
+JSX takes care of cross-side scripting attack because React doesn't blindly run the code

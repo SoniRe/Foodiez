@@ -1,0 +1,31 @@
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+
+Create scripts to run the commands
+now, we can write npm run start / npm start => npx parcel index.html
+
+//React Element => Object => HTMLElement(rendered component)
+//Created element using core react
+const heading = React.createElement("h1", { id: "heading" }, "Hello I'm here");
+
+console.log(heading);
+//JSX - Javascript syntax which is easier to create HTML element
+//JSX is seperate and React is seperate, it is used bcz its developer friendly
+
+// JSX(its a syntax) - is not HTML in Javascript, it's HTML or XML like syntax
+const jsxHeading = <h1 id="heading">Hello I'm here boy</h1>;
+
+console.log(jsxHeading);
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(jsxHeading);
+
+Transpiling converts source code from a programming language into an equivalent source code of the 
+same or a different programming language
+example - Parcel transpiles the JSX code into React code before it reaches the javascript engine
+
+Parcel gives this code to Babel to convert it into code which react will understand

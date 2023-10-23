@@ -1,0 +1,46 @@
+integrity: "shaha23sdfsdkfpskfpodsk"
+
+The integrity hash ensures that a package hasn't been tampered with. It also indicates the 
+resolved registry location where the package was retrieved from, and where it should be 
+retrieved from for future installs. 
+
+node_modules - It contains all the dependencies / code which we require
+Transitive Dependencies means dependencies are dependent on other dependencies that can be
+dependent on other dependencies
+If you have package.json and package-lock.json you can recreate your node-modules
+
+npm commands are to install a package if you want to execute a package we write npx
+Another way to get react into our app we can use npm 
+CDN Links is not a preferred way to bring react package into our app because:
+Its a costly operation as we have to get this from network
+
+Normal Javascript doesn't have imports
+we have to use <script type="module" src = "....." ></script>
+
+Server will autogenerate code which can be regenerated like node_modules 
+
+- What is Parcel/webpack ? Why do we need it?
+Parcel optimizes your whole app for production automatically. This includes tree-shaking and minifying your 
+JavaScript, CSS, and HTML, resizing and optimizing images, content hashing, automatic code splitting, and much more.
+
+- What is the difference between dependencies and devDependencies?
+In project development, dependencies are libraries that a project needs to function effectively. 
+DevDependencies are packages that a developer needs during development
+
+- What is Tree Shaking?
+Tree shaking refers to removing unecessary code/dead code in production
+
+- What is Hot Module Replacement?
+Hot Module Replacement (HMR) exchanges, adds, or removes modules while an application is running, without a full reload.
+
+Image Optimization - Image optimization is the process of reducing the size of an image for web use. This can involve: 
+	-> Compressing the file size
+	-> Changing the image format
+	-> Resizing the dimensions of your images
+	-> Labeling images with metadata
+
+Bundling - Bundling is merging your dependencies into a single optimized file
+
+Caching - Everything Parcel does is cached – transformation, dependency resolution, bundling, optimizing,
+ and everything in between. This means the dev server restarts instantly, and the same code is never built twice
+
