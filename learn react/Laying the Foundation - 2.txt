@@ -46,3 +46,16 @@ Cross-side scripting - an attack in which an attacker injects malicious executab
 			of a trusted application or website
 
 JSX takes care of cross-side scripting attack because React doesn't blindly run the code
+
+- Babel and Parcel role in JSX?
+  Parcel automatically supports JSX when it detects that you are using this in code
+
+- What are Components?
+  Components are resusable bits of code
+
+- What is type attribute in script tag?
+  This attribute indicates the type of script represented. The value of this attribute 
+  will be one of the following:
+
+ module: This value causes the code to be treated as a JavaScript module.
+ importmap: This value indicates that the body of the element contains an import map

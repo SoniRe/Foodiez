@@ -12,5 +12,35 @@ body {
 }
 
 #heading {
-  color: salmon;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  width: 100vw;
+  padding: 1vw 3vw;
+  border-bottom: 1px solid black;
+  background-color: #131921;
+}
+
+#heading input {
+  height: 5vh;
+  width: 75vw;
+  outline: none;
+  font-family: gilroy;
+  font-size: 1.5vw;
+  padding: 0 1vw;
+  border: 1px solid black;
+  border-radius: 2px;
+}
+
+#heading img:nth-child(3) {
+  border-radius: 50%;
+  height: 2.8vw;
+  width: 2.8vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+#heading img:nth-child(1) {
+  height: 5vh;
 }
