@@ -1,5 +1,3 @@
-40:48
-
 //Basic code to add Hello World to root element 
 <script>
       const heading = document.createElement("h1");

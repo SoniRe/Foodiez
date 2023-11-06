@@ -19,3 +19,21 @@
 - Host on HTTPS
 - Tree Shaking - Remove Unused code
 - Different dev and production bundles
+
+# Foodiez
+Header
+ - Logo
+ - Nav Items
+Body
+  - Search 
+  - Restaurant Container
+    - Restaurant Card 
+      - Img
+      - Name
+      - Star Rating, Delivery Time
+      - Cuisines
+Footer
+  - Copyright
+  - Links
+  - Address
+  - Contact 

@@ -1,3 +1,13 @@
+@font-face {
+  font-family: gilroy;
+  src: url(./assets/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: okra;
+  src: url(./assets/Okra-sans-font.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,36 +21,156 @@ body {
   font-family: gilroy;
 }
 
-#heading {
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9vh;
-  width: 100vw;
-  padding: 1vw 3vw;
-  border-bottom: 1px solid black;
-  background-color: #131921;
+  padding: 1vw 4vw;
 }
 
-#heading input {
-  height: 5vh;
-  width: 75vw;
-  outline: none;
-  font-family: gilroy;
-  font-size: 1.5vw;
-  padding: 0 1vw;
-  border: 1px solid black;
-  border-radius: 2px;
+#logo {
+  height: 5vw;
+  width: 6vw;
 }
 
-#heading img:nth-child(3) {
-  border-radius: 50%;
-  height: 2.8vw;
-  width: 2.8vw;
+#header img {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   object-position: center;
+  cursor: pointer;
+  transition: all ease 0.5s;
 }
 
-#heading img:nth-child(1) {
-  height: 5vh;
+#header img:hover {
+  scale: 1.1;
+}
+
+#nav-items {
+  display: flex;
+  gap: 2vw;
+}
+
+#nav-items h2 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#nav-items h2:hover {
+  color: #fc8019;
+}
+
+#body > h2 {
+  text-align: center;
+  font-size: 8vw;
+  font-family: okra;
+  color: #fc8019;
+}
+
+#body > h1 {
+  margin-top: 2vw;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#search {
+  width: 50%;
+  height: 6vh;
+  margin: 2vw auto 5vw;
+  position: relative;
+}
+
+#search i {
+  font-size: 1.5vw;
+  position: absolute;
+  color: #828282;
+  top: 50%;
+  left: 2%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+#search input {
+  height: 100%;
+  width: 100%;
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 5px;
+  font-size: 1.1vw;
+  padding: 0 3vw;
+  font-weight: 100;
+}
+
+#search input:focus {
+  outline: none;
+}
+
+#res-container {
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 78%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#res-card {
+  height: 35vh;
+  width: 17.5vw;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  margin-bottom: 2.5vw;
+}
+
+#res-card:hover {
+  scale: 0.9;
+}
+
+#card-top {
+  height: 65%;
+  width: 100%;
+}
+
+#card-top img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+}
+
+#card-bottom {
+  margin-top: 0.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 35%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2vw;
+}
+
+#card-bottom h3 {
+  font-size: 1.2vw;
+}
+
+#rating-section {
+  display: flex;
+  gap: 0.4vw;
+}
+
+#rating-section h4 {
+  font-size: 1vw;
+  font-weight: 800;
+}
+
+#card-bottom h2 {
+  font-size: 1vw;
+  color: #bdbdbd;
+  font-weight: 400;
 }
