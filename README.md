@@ -21,19 +21,23 @@
 - Different dev and production bundles
 
 # Foodiez
+
 Header
- - Logo
- - Nav Items
-Body
-  - Search 
-  - Restaurant Container
-    - Restaurant Card 
-      - Img
-      - Name
-      - Star Rating, Delivery Time
-      - Cuisines
-Footer
-  - Copyright
-  - Links
-  - Address
-  - Contact 
+
+- Logo
+- Nav Items
+  Body
+- Search
+- Restaurant Container - Restaurant Card - Img - Name - Star Rating, Delivery Time - Cuisines
+  Footer
+- Copyright
+- Links
+- Address
+- Contact
+
+# React Hooks
+
+(Normal JS Utility Functions)
+
+- useState()
+- useEffect()

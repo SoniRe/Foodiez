@@ -1,0 +1,19 @@
+React is effecient in DOM manipulation. React, Angular, Vue all are trying to become more and more efficient in DOM manipulation.
+So that they can sync Data Layer and UI Layer.
+
+Hooks - A normal javascript function which is given to us by react. There are multiple react hooks.
+also called State Variable because it maintains the state of the variable
+
+//Local State Variable
+const [listOfRestaurants, setListOfRestaurant] = useState()
+
+Can modify the variable using function
+
+Render - Whenever a state variable updates React re-renders the component
+
+Reconciliation Algorithm (React Fiber) - Below algo is called React Fiber. New way of finding the diff and updating the DOM
+
+Virtual DOM - It is the representation of actual DOM
+
+Diff Algorithm - Finds out difference between updated virtual DOM and old virtual DOM. It tries to find
+out the difference between old and new virtual DOM and updates Actual DOM

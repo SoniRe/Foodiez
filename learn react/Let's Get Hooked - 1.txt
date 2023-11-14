@@ -8,5 +8,18 @@ import { add, subtract } from './../../helpers';
 For multiple exports use Named export
 
 Two Types of export and import 
-1) Default Export
-2) Named Export
+1) Default Export and Import
+2) Named Export and Import
+
+- Default Export/Import
+
+  export default Component
+  import Component from "path"
+
+- Named Export/Import
+
+  export {Component}
+  import {Component} from "path"
+
+-> Can we have default export and Named export
+   Yes we can have default as well as Named export

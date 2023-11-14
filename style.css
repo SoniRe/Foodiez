@@ -82,7 +82,7 @@ body {
 #search {
   width: 50%;
   height: 6vh;
-  margin: 2vw auto 5vw;
+  margin: 2vw auto;
   position: relative;
 }
 
@@ -110,13 +110,40 @@ body {
   outline: none;
 }
 
+#filters {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 1vw;
+  width: 78%;
+  margin: 0 auto;
+  margin-bottom: 2vw;
+}
+
+#filters button {
+  padding: 0.7vw 1vw;
+  border-radius: 2vw;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid rgb(206, 206, 206);
+  color: rgb(67, 67, 67);
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+#filters button:hover {
+  border-color: #000;
+  color: #000;
+}
+
 #res-container {
   margin: 0 auto;
   min-height: 100vh;
   width: 78%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 2vw;
 }
 
 #res-card {
@@ -124,7 +151,6 @@ body {
   width: 17.5vw;
   transition: all ease 0.4s;
   cursor: pointer;
-  margin-bottom: 2.5vw;
 }
 
 #res-card:hover {
@@ -132,7 +158,7 @@ body {
 }
 
 #card-top {
-  height: 65%;
+  height: 70%;
   width: 100%;
 }
 
