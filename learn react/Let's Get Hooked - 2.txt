@@ -17,3 +17,16 @@ Virtual DOM - It is the representation of actual DOM
 
 Diff Algorithm - Finds out difference between updated virtual DOM and old virtual DOM. It tries to find
 out the difference between old and new virtual DOM and updates Actual DOM
+
+- What is * as export
+  In JavaScript, the * symbol is often used in conjunction with the export keyword in module systems to export
+  multiple items from a module.
+
+  export * from './otherModule'; // re-export everything from another module
+  import * as myModule from './module';
+
+- What is importance of config.js?
+  config.js can contain you API key, Database URL or configuration files needed
+
+
+ 

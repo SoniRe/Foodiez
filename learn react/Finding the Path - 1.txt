@@ -1,0 +1,5 @@
+useEffect - useEffect will be called after every time component is rendered
+
+if no dependency array => useEffect is called on every render
+if dependency array is empty = [] => useEffect is called only once at initial render
+if you have something as dependency = [btnNameReact] => useEffect is called every time dependency(btnNameReact) changes

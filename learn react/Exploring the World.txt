@@ -1,0 +1,36 @@
+Monolith Architecture - API, UI, Authentication, DB, SMS Code was written in a single big project. Because of this whenever there was
+something changed the whole project has to be build up which used to take a lot of time.
+
+Microservices Architecture - Different services for different jobs. Example - Backend Service, UI Service, DB Service. These are
+small/micro services which forms a big app. Example Uber followed Microservice architecture. This is known as Seperation of Concern
+and follows Single Responsibility. The React app we are making is an example of UI service.
+
+Different services could run on different ports which can later be maped to different domain names like /api.
+These services are connected by making calls to urls
+
+Approach to Make API Calls
+1) Page Load -> API Call -> Render UI
+2) Page Load -> Render UI -> API Call
+
+In React we will always be using 2nd Approach. Gives better UX
+
+useEffect() takes 2 arguements Callback Function and Dependency array.
+It will render the Component then Callback function of useEffect will be called 
+
+Shimmer UI used to better UX
+
+  //Conditional Rendering - Rendering on basis of some conditions
+  if (listOfRestaurants.length === 0) {
+    return <Shimmer />;
+  }
+
+Whole React Component is re-rendered when there is a change in Local State Variable. After rendered it creates a instance.
+Whenever state variable update, react triggers a reconciliation cyle(re-renders the component)
+
+- What is difference between statement and expression?
+  Expression - returns a value
+  Example - 123, 1 + 1, "hello", true
+	
+  Statements - complete task instruction
+  Example - let x = function() {} // Here function is just a statement
+  But x(); this will give me undefined which is an expression

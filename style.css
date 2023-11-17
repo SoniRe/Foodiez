@@ -31,6 +31,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1vw 4vw;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 9;
 }
 
 #logo {
@@ -53,6 +57,7 @@ body {
 
 #nav-items {
   display: flex;
+  align-items: center;
   gap: 2vw;
 }
 
@@ -64,6 +69,25 @@ body {
 
 #nav-items h2:hover {
   color: #fc8019;
+}
+
+#nav-items button {
+  padding: 0.75vw 1.25vw;
+  background-color: #fd8a2d;
+  border: none;
+  border: 1px solid #fc8019;
+  color: #343434;
+  border-radius: 5px;
+  font-size: 1.1vw;
+  font-family: gilroy;
+  font-weight: 600;
+  transition: all ease 0.4s;
+  cursor: pointer;
+  width: 6vw;
+}
+
+#nav-items button:hover {
+  background-color: #fff;
 }
 
 #body > h2 {
@@ -138,7 +162,7 @@ body {
 
 #res-container {
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 50vh;
   width: 78%;
   display: flex;
   flex-wrap: wrap;
@@ -199,4 +223,47 @@ body {
   font-size: 1vw;
   color: #bdbdbd;
   font-weight: 400;
+}
+
+.skeleton {
+  min-height: 100vh;
+  width: 78%;
+  margin: 5vw auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2vw;
+}
+
+.skeleton-card {
+  height: 35vh;
+  width: 17.5vw;
+  position: relative;
+}
+
+.skeleton-image {
+  height: 70%;
+  animation: skeleton-loading linear 1s infinite alternate;
+}
+
+.skeleton-text {
+  height: 5%;
+  margin-top: 1vw;
+  border-radius: 0.1vw;
+  animation: skeleton-loading linear 1s infinite alternate;
+}
+
+.skeleton-text:last-child {
+  width: 80%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: (200, 20%, 70%);
+  }
+
+  100% {
+    background-color: hsl(200, 20%, 95%);
+  }
 }
