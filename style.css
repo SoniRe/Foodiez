@@ -61,6 +61,21 @@ body {
   gap: 2vw;
 }
 
+#nav-items a {
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#nav-items a:visited {
+  color: #000;
+}
+
+#nav-items a:hover {
+  color: #fc8019;
+}
+
 #nav-items h2 {
   font-size: 1.2vw;
   font-weight: 600;
@@ -95,6 +110,10 @@ body {
   font-size: 8vw;
   font-family: okra;
   color: #fc8019;
+}
+
+#body {
+  margin-bottom: 5vw;
 }
 
 #body > h1 {
@@ -174,6 +193,7 @@ body {
   height: 35vh;
   width: 17.5vw;
   transition: all ease 0.4s;
+  margin-top: 0.5vw;
   cursor: pointer;
 }
 
@@ -266,4 +286,257 @@ body {
   100% {
     background-color: hsl(200, 20%, 95%);
   }
+}
+
+#footer {
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vw;
+  min-height: 60vh;
+  padding: 5vw 0 2vw 0;
+}
+
+#footer #top {
+  display: flex;
+  width: 78%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#top-right {
+  display: flex;
+  gap: 2vw;
+  font-size: 1.2vw;
+}
+
+#top-left h3 {
+  font-size: 3vw;
+  font-family: okra;
+  color: #fc8019;
+}
+
+#icon1 {
+  border: 1px solid #b5b5b5;
+  padding: 0.75vw 0.9vw;
+  border-radius: 10px;
+}
+
+#icon2 {
+  border: 1px solid #b5b5b5;
+  padding: 0.75vw 0.9vw;
+  border-radius: 10px;
+}
+
+#footer #bottom {
+  display: flex;
+  width: 78%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+#bottom h3 {
+  letter-spacing: 4px;
+  font-size: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 0.6vw;
+}
+
+#bottom h4 {
+  margin-bottom: 0.6vw;
+  font-size: 1vw;
+  font-weight: 400;
+  color: #828282;
+}
+
+#footer #bottom img {
+  height: 2.5vw;
+  margin-top: 0.5vw;
+}
+
+#bottom #fifth-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#fifth-section i {
+  font-size: 1.5vw;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+#line {
+  width: 78%;
+  margin: 0 auto;
+  height: 2px;
+  background-color: #d5d5d5;
+}
+
+#terms {
+  width: 78%;
+  margin: 0 auto;
+}
+#terms h4 {
+  font-size: 0.9vw;
+  color: #b5b5b5;
+  font-weight: 400;
+}
+
+#contact {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10vw;
+  position: relative;
+}
+
+#contact #overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -9;
+}
+
+#contact-left {
+  padding-left: 12vw;
+}
+
+#contact-left {
+}
+
+#contact img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -99;
+}
+
+#contact h1 {
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+#contact p {
+  font-size: 1.2vw;
+  width: 80%;
+  margin-top: 1vw;
+}
+
+#contact-right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+#contact-right label {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-top: 1vw;
+}
+
+#contact-right input {
+  padding: 1vw 0.75vw 1vw 1.5vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+}
+
+#contact-right input::placeholder {
+  font-size: 1vw;
+}
+
+#contact-right textarea {
+  padding: 1vw 0.75vw 1vw 1.5vw;
+  margin-top: 0.5vw;
+  font-size: 1vw;
+}
+
+#contact-right textarea::placeholder {
+  font-size: 1.1vw;
+  font-family: gilroy;
+}
+
+#contact button {
+  margin-top: 1.5vw;
+  font-size: 1.3vw;
+  padding: 1vw 0;
+  background-color: black;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+#contact button:hover {
+  background-color: #fff;
+  color: black;
+  border-color: #000;
+}
+
+#about {
+  display: flex;
+  min-height: 100%;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw 15vw 0 15vw;
+  margin-bottom: 5vw;
+}
+
+#about-left img {
+  height: 40vw;
+  width: 30vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+#about-right {
+  margin-left: 5vw;
+}
+
+#about-right h1 {
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+#about-right p {
+  margin-top: 1vw;
+  font-size: 1.2vw;
+  width: 100%;
+  color: #828282;
+}
+
+#about-right button {
+  margin-top: 1.5vw;
+  padding: 0.9vw 1vw;
+  background-color: #fc8019;
+  border: none;
+  border-radius: 2vw;
+  font-size: 1vw;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  gap: 0.5vw;
+  border: 1px solid transparent;
+  transition: all ease 0.5s;
+}
+
+#about-right button:hover {
+  background-color: transparent;
+  color: #fc8019;
+  border-color: #fc8019;
+}
+
+#about-right button i {
+  font-size: 1vw;
 }

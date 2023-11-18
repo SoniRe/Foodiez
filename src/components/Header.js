@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import logo from "./../../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -14,9 +15,9 @@ const Header = () => {
         <img src={logo} alt="" />
       </div>
       <div id="nav-items">
-        <h2>Home</h2>
-        <h2>About Us</h2>
-        <h2>Contact Us</h2>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Us</Link>
+        <Link to="/contact">Contact Us</Link>
         <h2>Cart</h2>
         <button
           onClick={() => {
