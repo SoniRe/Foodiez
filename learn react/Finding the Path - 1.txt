@@ -56,4 +56,11 @@ const appRouter = createBrowserRouter([
   },
 ]);
 
-Never use anchor tag to route from one page to another
+Never use anchor tag to route from one page to another. Because it reloads the whole page. While using <Link /> only component
+gets refreshed
+
+React helps us create single page application
+
+There can be 2 types of routing in web applications:-
+1) Client Side Routing - Now it doesn't make network call for fetching another page.
+2) Server Side Routing - Earlier we used to make network call to server to get another html page.

@@ -18,7 +18,7 @@ const About = () => {
           begins here – welcome to Foodiez, where every meal is a celebration!
         </p>
         <button>
-          Discover More <i class="ri-arrow-right-line"></i>
+          Discover More <i className="ri-arrow-right-line"></i>
         </button>
       </div>
     </div>

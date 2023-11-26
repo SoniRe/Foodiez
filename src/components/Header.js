@@ -5,14 +5,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
 
-  useEffect(() => {
-    console.log("Use Effect called");
-  }, []);
-
   return (
     <div id="header">
       <div id="logo">
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
       </div>
       <div id="nav-items">
         <Link to="/">Home</Link>

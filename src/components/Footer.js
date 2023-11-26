@@ -10,10 +10,10 @@ const Footer = () => {
         </div>
         <div id="top-right">
           <div id="icon1">
-            <i class="ri-home-fill"></i>India
+            <i className="ri-home-fill"></i>India
           </div>
           <div id="icon2">
-            <i class="ri-global-line"></i>English
+            <i className="ri-global-line"></i>English
           </div>
         </div>
       </div>
@@ -57,11 +57,11 @@ const Footer = () => {
         <div id="fifth-section">
           <h3>SOCIAL LINKS</h3>
           <div id="fifth-section-top">
-            <i class="ri-linkedin-box-line"></i>
-            <i class="ri-instagram-line"></i>
-            <i class="ri-twitter-x-line"></i>
-            <i class="ri-youtube-line"></i>
-            <i class="ri-facebook-circle-fill"></i>
+            <i className="ri-linkedin-box-line"></i>
+            <i className="ri-instagram-line"></i>
+            <i className="ri-twitter-x-line"></i>
+            <i className="ri-youtube-line"></i>
+            <i className="ri-facebook-circle-fill"></i>
           </div>
           <img src={apple} alt="" />
           <img src={playstore} alt="" />

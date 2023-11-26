@@ -1,0 +1,10 @@
+For Dynamic Routing
+{
+path: "/restaurant/:resId",
+
+}
+
+₹{price / 100 || defaultPrice / 100} 
+It evaluates on basis of truthy and falsy
+
+useParams() hook is used to give what is passed thorugh
