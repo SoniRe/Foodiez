@@ -37,7 +37,7 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
 
-  const filteredVegItems = itemCards.filter((dish) => {
+  const filteredVegItems = itemCards?.filter((dish) => {
     if (veg == true) {
       return dish?.card?.info?.itemAttribute.vegClassifier === "VEG";
     } else {

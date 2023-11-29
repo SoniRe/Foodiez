@@ -1,0 +1,62 @@
+class UserClass extends React.Component {
+  constructor(props) {
+    super(props);
+
+    //To manage state variables we write all in one big object
+    this.state = {
+      count: 0,
+      count2: 1,
+    };
+  }	
+
+
+    render() {
+        return <h1>It's a class based component</h1>
+    }
+}
+
+React.Component tells its a class based component. render() method returns piece of JSX.
+In class based component we get from constructor and then super(props)
+
+ - Why do we need super constructor or why we write super(props) ?
+    A 👷‍♂️ super constructor is a special constructor in the class hierarchy of object-oriented programming languages. 
+    It refers to the constructor of the parent class that is being extended in the current class. The purpose of 
+    using the super constructor with a props argument is to inherit the properties of the parent class and also pass 
+    in additional properties as arguments to the child class.
+
+Loading a function based component meaning invoking the function
+Mounting/Loading a class based component oon the web page means creating instance of class. Way is in constructor to create state variable
+
+If we update one State variable in class based component it will update only what is updated and won't touch the other value.
+We update using setState(). Whenever Class instance is created constructor() is called
+
+Class Lifecycle
+constructor() -> render() -> componentDidMount()
+
+componentDidMount() - To make an API call
+
+React Lifecycle Method Diagram
+https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+
+React Mounts in 2 phases -
+1) Render Phase
+2) Commit Phase
+
+---MOUNTING---
+
+- Constructor(dummy)
+- Render(dummy)
+	- HTML (dummy)
+- Component Did Mount
+	- API Call
+	- this.setState -> State variable is updated
+
+---UPDATE---
+- Render(API Data)
+	- HTML(API Data)
+- Component Did Update
+
+--UNMOUNTING---
+- Component Will Unmount
+
+Component Did Mount is not equilvalent to useEffect
