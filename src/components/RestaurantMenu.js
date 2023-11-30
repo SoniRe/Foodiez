@@ -1,11 +1,11 @@
 import MenuCard from "./MenuCard";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ShimmerRes from "./ShimmerRes";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
+import useRestaurantMenu from "../utils/useRestaurantMenu";
 
 const RestaurantMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
   const [veg, setVeg] = useState(false);
   const [vegStyle, setVegStyle] = useState({
     left: "5%",
@@ -13,19 +13,7 @@ const RestaurantMenu = () => {
   });
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchMenu();
-  }, []);
-
-  const fetchMenu = async () => {
-    const data = await fetch(
-      `https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5987633&lng=77.0786143&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`
-    );
-
-    const json = await data.json();
-    console.log(json);
-    setResInfo(json.data);
-  };
+  const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) {
     return <ShimmerRes />;

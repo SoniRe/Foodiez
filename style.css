@@ -96,11 +96,10 @@ a:visited {
   color: #fc8019;
 }
 
-#nav-items button {
+#nav-items a:last-child {
   padding: 0.75vw 1.25vw;
-  background-color: #fd8a2d;
-  border: none;
-  border: 1px solid #fc8019;
+  background-color: #fc8019;
+  border: 2px solid #fc8019;
   color: #343434;
   border-radius: 5px;
   font-size: 1.1vw;
@@ -109,9 +108,10 @@ a:visited {
   transition: all ease 0.4s;
   cursor: pointer;
   width: 6vw;
+  text-align: center;
 }
 
-#nav-items button:hover {
+#nav-items a:last-child:hover {
   background-color: #fff;
 }
 
@@ -732,4 +732,72 @@ a:visited {
 
 #error button:hover {
   border-color: #000;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  width: 100%;
+  gap: 10vw;
+  padding: 5vw 0;
+}
+
+#login img {
+  height: 20vw;
+}
+
+#login-box {
+  height: 70vh;
+  width: 30vw;
+  background-color: #fc8019;
+  border-radius: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#login-box h1 {
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  padding-bottom: 3vw;
+  margin-top: 1vw;
+}
+
+#login-box label {
+  width: 80%;
+  margin: 0 auto;
+  color: #f9f9f9;
+}
+
+#login-box input {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1vw;
+  font-size: 1.3vw;
+  font-family: gilroy;
+  border: none;
+  border-radius: 3px;
+}
+
+#login-box input:focus {
+  outline: none;
+}
+
+#login-box button {
+  width: 80%;
+  margin: 2vw auto;
+  padding: 1vw;
+  font-size: 1.3vw;
+  font-family: gilroy;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  border: none;
+}
+
+#login-box button:hover {
+  color: #fc8019;
 }

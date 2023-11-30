@@ -60,3 +60,14 @@ React Mounts in 2 phases -
 - Component Will Unmount
 
 Component Did Mount is not equilvalent to useEffect
+
+this.timer = setInterval() or Any functions will keep running in class based until you clear it in componentWillUnmount()
+clearInterval(this.timer);
+
+return() => {
+  console.log("useEffect Return");
+} // useEffect returns a function which is same as unmounting it
+
+ - Why can't we use callback function of useEffect async?
+   The useEffect hook in React expects its callback function to return either nothing (undefined) or a cleanup function. 
+   However, an async function implicitly returns a Promise2, which is not what useEffect expects for its first argument1.

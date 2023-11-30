@@ -2,10 +2,11 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useRestaurantBody from "../utils/useRestaurantBody";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Body = () => {
   //State Variable - Super powerful variable
-  const [listOfRestaurants, setListOfRestaurant] = useState([]);
   const [query, setQuery] = useState("");
   const [rating, setRating] = useState(0); //Min Rating is 0
   const [delivery, setDelivery] = useState(120); // Max Delivery Time Can be 120 mins
@@ -18,20 +19,7 @@ const Body = () => {
     borderColor: "rgb(206, 206, 206)",
   });
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5987633&lng=77.0786143&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
-    );
-    const json = await data.json();
-
-    setListOfRestaurant(
-      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-  };
+  const listOfRestaurants = useRestaurantBody();
 
   const filteredItems = listOfRestaurants.filter((res) => {
     return (
@@ -40,6 +28,13 @@ const Body = () => {
       res.info.sla.deliveryTime < delivery
     );
   });
+
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false) {
+    return (
+      <h1>Looks Like You are offline. Please Check Your Internet Connection</h1>
+    );
+  }
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />

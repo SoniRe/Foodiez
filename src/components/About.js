@@ -49,6 +49,9 @@ class About2 extends Component {
 }
 
 const About = () => {
+  const fnc = async function abcd() {};
+  console.log(fnc);
+
   return (
     <div id="about">
       <div id="about-page1">
@@ -76,4 +79,4 @@ const About = () => {
   );
 };
 
-export default About2;
+export default About;

@@ -4,6 +4,7 @@ const RestaurantCard = (props) => {
   const { resData } = props;
   const { name, avgRating, sla, cuisines, cloudinaryImageId, areaName } =
     resData?.info;
+
   let cuisineOption = cuisines.join(", ");
   cuisineOption =
     cuisineOption.length > 30

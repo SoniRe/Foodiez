@@ -1,0 +1,31 @@
+1:00:00
+
+Single Responsibility Principle - Each component should have single responsibility
+Modularity - Meaning Dividing big code into multiple small piece of code or module. 
+
+To make our code -
+1) Maintainable
+2) Reusable
+3) Testable
+
+We Create custom hooks to follow Single Responsibility Principle
+
+Here this useRestaurantBody() is created to fetch data from API
+const useRestaurantBody = () => {
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(HOME_PAGE_URL);
+    const json = await data.json();
+
+    setListOfRestaurants(
+      json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
+  };
+
+  return listOfRestaurants;
+};
