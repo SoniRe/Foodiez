@@ -29,10 +29,20 @@ const Body = () => {
     );
   });
 
+  const offlineStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "80vh",
+    width: "100%",
+  };
+
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) {
     return (
-      <h1>Looks Like You are offline. Please Check Your Internet Connection</h1>
+      <h1 style={offlineStyle}>
+        Looks Like You are offline. Please Check Your Internet Connection
+      </h1>
     );
   }
 

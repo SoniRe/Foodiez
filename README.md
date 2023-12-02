@@ -11,7 +11,7 @@
 - Caching - Faster Builds
 - Image Optimization
 - Minification of file
-- Bundling
+- Bundling - It bundles all files into one file
 - Compressing
 - Consistent Hashing
 - Code Splitting
@@ -19,6 +19,7 @@
 - Host on HTTPS
 - Tree Shaking - Remove Unused code
 - Different dev and production bundles
+- Chunking | Code Splitting | Lazy Loading | Dynamic Bundling | On Demand Loading - Break down apps into smaller logical chunks
 
 # Foodiez
 
