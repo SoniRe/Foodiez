@@ -1,9 +1,9 @@
-import MenuCard from "./MenuCard";
 import { useState } from "react";
 import ShimmerRes from "./ShimmerRes";
 import { CDN_URL } from "../utils/constants";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 const RestaurantMenu = () => {
   const [veg, setVeg] = useState(false);
@@ -22,16 +22,12 @@ const RestaurantMenu = () => {
   const { name, cuisines, locality, cloudinaryImageId } =
     resInfo?.cards[0]?.card?.card?.info;
 
-  const { itemCards } =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-
-  const filteredVegItems = itemCards?.filter((dish) => {
-    if (veg == true) {
-      return dish?.card?.info?.itemAttribute.vegClassifier === "VEG";
-    } else {
-      return dish;
-    }
-  });
+  const categoryFiltered =
+    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
 
   return (
     <div id="menu">
@@ -67,9 +63,18 @@ const RestaurantMenu = () => {
           </div>
           <h3>Veg Only</h3>
         </div>
-        {filteredVegItems?.map((dish) => {
-          return <MenuCard key={dish?.card?.info?.id} dishData={dish} />;
-        })}
+
+        <ul id="accordian">
+          {categoryFiltered?.map((c, index) => {
+            return (
+              <RestaurantCategory
+                key={index}
+                vegOption={veg}
+                resData={c?.card?.card}
+              />
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

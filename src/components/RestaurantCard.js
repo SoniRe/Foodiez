@@ -64,4 +64,19 @@ const RestaurantCard = (props) => {
   );
 };
 
+// Higher Order Component
+
+// input - Restaurant Card => Restaurant Card With Promotion
+// Not Working because of Promoted Removed
+// export const withDiscountLabel = (RestaurantCard) => {
+//   return (props) => {
+//     return (
+//       <div>
+//         <label>Discount Available</label>
+//         <RestaurantCard {...props} />
+//       </div>
+//     );
+//   };
+// };
+
 export default RestaurantCard;

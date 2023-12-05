@@ -1,5 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useRestaurantBody from "../utils/useRestaurantBody";
@@ -20,6 +20,8 @@ const Body = () => {
   });
 
   const listOfRestaurants = useRestaurantBody();
+
+  // const RestaurantDiscountedCard = withDiscountLabel(RestaurantCard);
 
   const filteredItems = listOfRestaurants.filter((res) => {
     return (

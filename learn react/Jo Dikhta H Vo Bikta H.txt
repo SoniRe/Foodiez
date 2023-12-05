@@ -1,0 +1,5 @@
+PostCSS - A tool for transforming CSS with Javascript. Tailwind uses PostCSS
+
+Disadvantage of Tailwind
+1) Code may become ugly as we build some complex UI
+2) Comes with initial learning curve

@@ -801,3 +801,43 @@ a:visited {
 #login-box button:hover {
   color: #fc8019;
 }
+
+li {
+  list-style: none;
+  margin-bottom: 2vw;
+  padding: 10px;
+  background-color: #fff;
+}
+
+#accordian {
+  background-color: #f1f1f6;
+}
+
+li label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 0;
+  font-size: 1.5vw;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+label span {
+  color: #3333;
+  font-size: 1.5vw;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+
+input[type="radio"]:checked + .content {
+  max-height: 100%;
+}

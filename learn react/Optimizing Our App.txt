@@ -41,3 +41,7 @@ const Grocery = lazy(() => import("./components/Grocery"));
  </Suspense>
  ),
 },
+
+ - What are the advantages and disadvantages of this type of code splitting?
+   Advantages - Faster Loading Process, Reduced Server Load, Better UX(User Expereience)
+   Disadvantages - Additional Code to be processed by browser, Additional Communication with server

@@ -1,0 +1,16 @@
+Higher Order Component - Function that takes a component as an input and returns a component
+
+const RestaurantDiscountedCard = withDiscountLabel(RestaurantCard);
+
+export const withDiscountLabel = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div>
+        <label>Discount Available</label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
+
+Controlled vs Uncontrolled Component
