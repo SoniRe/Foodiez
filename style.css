@@ -586,6 +586,7 @@ a:visited {
   height: 20vh;
   width: 11vw;
   border-radius: 10px;
+  position: relative;
 }
 
 #menu-card-right img {
@@ -593,6 +594,23 @@ a:visited {
   width: 11vw;
   object-fit: cover;
   object-position: center;
+  border-radius: 10px;
+}
+
+#menu-card-right button {
+  position: absolute;
+  bottom: -7%;
+  left: 50%;
+  font-size: 1vw;
+  padding: 0.5vw 2vw;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-color: #fff;
+  font-family: gilroy;
+  font-weight: 600;
+  border: 1px solid #60b246;
+  border-radius: 5px;
+  color: #60b246;
 }
 
 #menu-card h4 {
@@ -826,18 +844,4 @@ li label {
 label span {
   color: #3333;
   font-size: 1.5vw;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s;
-}
-
-input[type="radio"]:checked + .content {
-  max-height: 100%;
 }

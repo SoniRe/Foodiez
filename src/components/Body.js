@@ -23,7 +23,7 @@ const Body = () => {
 
   // const RestaurantDiscountedCard = withDiscountLabel(RestaurantCard);
 
-  const filteredItems = listOfRestaurants.filter((res) => {
+  const filteredItems = listOfRestaurants?.filter((res) => {
     return (
       res.info.name.toLowerCase().includes(query.toLowerCase()) &&
       res.info.avgRating >= rating &&
@@ -48,7 +48,7 @@ const Body = () => {
     );
   }
 
-  return listOfRestaurants.length === 0 ? (
+  return listOfRestaurants?.length === 0 ? (
     <Shimmer />
   ) : (
     <div id="body">

@@ -1,7 +1,8 @@
+import { useState } from "react";
 import MenuCard from "./MenuCard";
 
 const RestaurantCategory = (props) => {
-  const { vegOption, resData } = props;
+  const { vegOption, resData, showItems, setMyIndex } = props;
   const { title, itemCards } = resData;
 
   const filteredVegItems = itemCards?.filter((dish) => {
@@ -16,19 +17,24 @@ const RestaurantCategory = (props) => {
     return;
   }
 
+  const handleClick = () => {
+    // setShowItems(!showItems);
+    setMyIndex();
+  };
+
   return (
     <li>
-      <label htmlFor={title}>
+      <label htmlFor={title} onClick={handleClick}>
         {title}
         <span>
           <i class="ri-arrow-down-s-line"></i>
         </span>
       </label>
-      <input type="radio" name="accordian" id={title} />
       <div className="content">
-        {filteredVegItems?.map((dish) => {
-          return <MenuCard key={dish?.card?.info?.id} dishData={dish} />;
-        })}
+        {showItems &&
+          filteredVegItems?.map((dish) => {
+            return <MenuCard key={dish?.card?.info?.id} dishData={dish} />;
+          })}
       </div>
     </li>
   );

@@ -11,7 +11,10 @@ const RestaurantMenu = () => {
     left: "5%",
     backgroundColor: "#fff",
   });
+  const [showIndex, setShowIndex] = useState(null);
   const { resId } = useParams();
+
+  const dummy = "Dummy Data";
 
   const resInfo = useRestaurantMenu(resId);
 
@@ -67,10 +70,17 @@ const RestaurantMenu = () => {
         <ul id="accordian">
           {categoryFiltered?.map((c, index) => {
             return (
+              // Controlled Component
               <RestaurantCategory
-                key={index}
+                key={c?.card?.card?.title}
                 vegOption={veg}
                 resData={c?.card?.card}
+                showItems={index === showIndex && true}
+                setMyIndex={() => {
+                  index === showIndex
+                    ? setShowIndex(null)
+                    : setShowIndex(index);
+                }}
               />
             );
           })}

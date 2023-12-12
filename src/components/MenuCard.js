@@ -18,6 +18,7 @@ const MenuCard = (props) => {
 
       <div id="menu-card-right">
         <img src={imageSource} alt="" />
+        <button>ADD</button>
       </div>
     </div>
   );
