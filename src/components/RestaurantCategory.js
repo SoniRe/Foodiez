@@ -18,7 +18,6 @@ const RestaurantCategory = (props) => {
   }
 
   const handleClick = () => {
-    // setShowItems(!showItems);
     setMyIndex();
   };
 
@@ -27,7 +26,7 @@ const RestaurantCategory = (props) => {
       <label htmlFor={title} onClick={handleClick}>
         {title}
         <span>
-          <i class="ri-arrow-down-s-line"></i>
+          <i className="ri-arrow-down-s-line"></i>
         </span>
       </label>
       <div className="content">

@@ -90,10 +90,27 @@ a:visited {
   font-size: 1.2vw;
   font-weight: 600;
   cursor: pointer;
+  position: relative;
 }
 
 #nav-items h2:hover {
   color: #fc8019;
+}
+
+#nav-items h2 span {
+  position: absolute;
+  top: -35%;
+  font-size: 0.8vw;
+  right: -20%;
+  color: #fff;
+  padding: 2px;
+  height: 1.2vw;
+  width: 1.2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #fc8019;
 }
 
 #nav-items a:last-child {
@@ -597,20 +614,32 @@ a:visited {
   border-radius: 10px;
 }
 
-#menu-card-right button {
+#menu-card-right div {
   position: absolute;
   bottom: -7%;
   left: 50%;
   font-size: 1vw;
   padding: 0.5vw 2vw;
+  width: 55%;
   transform: translateX(-50%);
-  cursor: pointer;
   background-color: #fff;
   font-family: gilroy;
   font-weight: 600;
   border: 1px solid #60b246;
   border-radius: 5px;
   color: #60b246;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+#menu-card-right div button {
+  border: none;
+  color: #60b246;
+  font-size: 1.2vw;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 #menu-card h4 {
@@ -844,4 +873,39 @@ li label {
 label span {
   color: #3333;
   font-size: 1.5vw;
+}
+
+#cart {
+  width: 78%;
+  margin: 0 auto;
+  padding: 3vw 0;
+}
+
+#cart-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3vw;
+}
+
+#cart h1 {
+  font-size: 2.5vw;
+}
+
+#cart-top button {
+  padding: 0.9vw 1vw;
+  outline: none;
+  font-size: 1vw;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 1vw;
+}
+
+#cart-top button:hover {
+  background-color: #fff;
+}
+
+#trash-bin {
+  font-size: 1.2vw;
+  margin-left: 0.5vw;
 }

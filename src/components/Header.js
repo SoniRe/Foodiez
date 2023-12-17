@@ -2,9 +2,14 @@ import logo from "./../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const { loggedInUser } = useContext(UserContext);
+
+  // Subscribing to the store using our Selector
+
+  const cart = useSelector((store) => store.cart.items);
 
   return (
     <div id="header">
@@ -17,7 +22,12 @@ const Header = () => {
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
         <Link to="/contact">Contact Us</Link>
-        <h2>Cart</h2>
+        <Link to="/cart">
+          <h2>
+            Cart <i className="ri-shopping-cart-2-fill"></i>
+            <span>{cart.length}</span>
+          </h2>
+        </Link>
         <Link to="/login">{loggedInUser}</Link>
       </div>
     </div>

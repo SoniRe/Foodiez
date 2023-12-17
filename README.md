@@ -42,3 +42,12 @@ Header
 
 - useState()
 - useEffect()
+
+# Redux Toolkit
+
+- Install @reduxjs/toolkit and react-redux
+- Build our store
+- Connext our store to our app
+- Slice (cartSlice)
+- dispatch(action)
+- Selector
