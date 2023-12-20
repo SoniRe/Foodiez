@@ -114,22 +114,23 @@ a:visited {
 }
 
 #nav-items a:last-child {
-  padding: 0.75vw 1.25vw;
+  padding: 0.9vw 1vw;
   background-color: #fc8019;
-  border: 2px solid #fc8019;
-  color: #343434;
-  border-radius: 5px;
-  font-size: 1.1vw;
-  font-family: gilroy;
-  font-weight: 600;
-  transition: all ease 0.4s;
+  border: none;
+  border-radius: 2vw;
+  font-size: 1vw;
+  color: #fff;
   cursor: pointer;
+  border: 1px solid transparent;
+  transition: all ease 0.5s;
   width: 6vw;
   text-align: center;
 }
 
 #nav-items a:last-child:hover {
-  background-color: #fff;
+  background-color: transparent;
+  color: #fc8019;
+  border-color: #fc8019;
 }
 
 #body > h2 {
@@ -908,4 +909,7 @@ label span {
 #trash-bin {
   font-size: 1.2vw;
   margin-left: 0.5vw;
+}
+
+@media (max-width: 600px) {
 }

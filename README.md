@@ -1,4 +1,4 @@
-# Namaste React 🚀
+# Foodiez
 
 # Parcel
 
@@ -51,3 +51,22 @@ Header
 - Slice (cartSlice)
 - dispatch(action)
 - Selector
+
+# Types of Testing (Developer)
+
+- Unit Testing
+- Integration Testing
+- End to End Testing - e2e Testing
+
+# Setting up Testing in our App
+
+- Install React Testing Library
+- Installed Jest
+- Installed Babel Dependencies
+- Configure Babel
+- Configure Parcel Config file to disable default Babel Transpilation
+- Jest - npx jest --init
+- npm install --save-dev jest-environment-jsdom
+- Install @babel/preset-react to make JSX work in test cases
+- Include @babel/preset-react inside my babel config
+- Install @testing-library/jest-dom

@@ -58,6 +58,7 @@ const Body = () => {
         <i className="ri-search-line"></i>
         <input
           type="text"
+          data-testid="searchInput"
           placeholder="Search for restaurants and Food"
           onChange={(event) => {
             setQuery(event.target.value.toLowerCase());

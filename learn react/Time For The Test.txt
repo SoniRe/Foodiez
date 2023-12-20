@@ -1,0 +1,44 @@
+3:00:30 
+ 
+- Developer Testing
+   Manual Testing
+  
+   Unit Testing - Suppose if we want to do just test Header Component with isolation from app. Test just specific small unit.
+  
+   Integration Testing - Testing the integration of the components. 
+  
+   End to End Testing (e2e Testing) - Testing as soon as user lands on the website till the end of the user actibity
+
+Testing is the part of the development
+
+React Testing Library uses Jest 
+
+Test cases need a runtime environment to run. Example we use jsDOM library which is like a browser
+
+__a__ = dunder
+
+test("Description of test case", () => {
+  const result = sum(3, 4);
+
+  // Assertion
+  expect(result).toBe(7);
+});
+
+Testing UI we render the component to jsDOM
+
+screen.getByPlaceholderText("Eg:Aditya Verma"); -> This is the react js element
+
+For multiple items we use getAllByRole()
+For single item we use getByRole()
+
+describe("To group multiple test cases", () => {
+ // Test case 1
+ test("", () => {}) 
+
+ // test case 2
+ it("", () => {}) 
+})
+
+it - Alias for test
+
+Test cases won't make API calls
