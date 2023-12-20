@@ -1,5 +1,3 @@
-# Foodiez
-
 # Parcel
 
 - Dev Build
