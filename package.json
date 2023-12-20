@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/SoniRe/namaste-react/issues"
   },
-  "homepage": "https://github.com/SoniRe/namaste-react#readme",
   "devDependencies": {
     "@babel/core": "^7.23.6",
     "@babel/preset-env": "^7.23.6",
@@ -32,6 +31,7 @@
   "dependencies": {
     "@babel/preset-react": "^7.23.3",
     "@reduxjs/toolkit": "^2.0.1",
+    "http-proxy-middleware": "^2.0.6",
     "jest-transform-stub": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

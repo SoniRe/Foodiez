@@ -912,4 +912,49 @@ label span {
 }
 
 @media (max-width: 600px) {
+  #header {
+    background-color: #fff;
+  }
+
+  #logo {
+    height: 12vw;
+    width: 14vw;
+  }
+
+  #nav-items {
+    display: none;
+  }
+
+  #body > h2 {
+    display: none;
+  }
+
+  #body > h1 {
+    display: none;
+  }
+
+  #search {
+    width: 85%;
+    margin: 3vw auto;
+    height: 5vh;
+  }
+
+  #search i {
+    color: #fc8019;
+    font-size: 5vw;
+  }
+
+  #search input {
+    padding: 0 8vw;
+    font-size: 4vw;
+  }
+
+  #filters button {
+    padding: 2vw 3vw;
+    border-radius: 5vw;
+  }
+
+  .skeleton-card {
+    width: 100%;
+  }
 }
