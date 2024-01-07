@@ -16,8 +16,6 @@ const useRestaurantBody = () => {
       return item?.card?.card.id === "restaurant_grid_listing";
     });
 
-    console.log(filterData);
-
     setListOfRestaurants(
       filterData[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
