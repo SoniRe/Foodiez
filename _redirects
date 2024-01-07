@@ -1,2 +1,2 @@
-/api1/_ https://www.swiggy.com/dapi/restaurants/list/v5/:splat 200
-/api2/_ https://www.swiggy.com/dapi/menu/pl/:splat 200
+/restaurants/_ https://www.swiggy.com/dapi/restaurants/list/v5/:splat 200
+/menu/_ https://www.swiggy.com/dapi/menu/pl/:splat 200
