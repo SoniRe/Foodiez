@@ -12,7 +12,7 @@ const useRestaurantBody = () => {
     const data = await fetch(HOME_PAGE_URL);
     const json = await data.json();
 
-    const filterData = json?.data?.cards?.filter((item) => {
+    const filterData = await json?.data?.cards?.filter((item) => {
       return item?.card?.card.id === "restaurant_grid_listing";
     });
 

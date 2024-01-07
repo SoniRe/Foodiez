@@ -35461,7 +35461,7 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CDN_URL", ()=>CDN_URL);
 parcelHelpers.export(exports, "HOME_PAGE_URL", ()=>HOME_PAGE_URL);
 const CDN_URL = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-const HOME_PAGE_URL = "/api1?lat=28.6028557&lng=77.08198850000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const HOME_PAGE_URL = "/dapi/restaurants/list/v5?lat=28.6028557&lng=77.08198850000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g6ZGj":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -35832,7 +35832,7 @@ const useRestaurantBody = ()=>{
     const fetchData = async ()=>{
         const data = await fetch((0, _constants.HOME_PAGE_URL));
         const json = await data.json();
-        const filterData = json?.data?.cards?.filter((item)=>{
+        const filterData = await json?.data?.cards?.filter((item)=>{
             return item?.card?.card.id === "restaurant_grid_listing";
         });
         setListOfRestaurants(filterData[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -37027,7 +37027,7 @@ const useRestaurantMenu = (resId)=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch(`/api2?page-type=REGULAR_MENU&complete-menu=true&lat=28.5987633&lng=77.0786143&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+        const data = await fetch(`/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.5987633&lng=77.0786143&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
         const json = await data.json();
         setResInfo(json?.data);
     };
