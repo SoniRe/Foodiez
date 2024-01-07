@@ -12,11 +12,15 @@ const useRestaurantBody = () => {
     const data = await fetch(HOME_PAGE_URL);
     const json = await data.json();
 
-    setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    const filterData = json?.data?.cards?.filter((item) => {
+      return item?.card?.card.id === "restaurant_grid_listing";
+    });
 
-    console.log(json);
+    console.log(filterData);
+
+    setListOfRestaurants(
+      filterData[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    );
   };
 
   return listOfRestaurants;
