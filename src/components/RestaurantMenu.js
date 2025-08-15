@@ -14,8 +14,6 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(null);
   const { resId } = useParams();
 
-  const dummy = "Dummy Data";
-
   const resInfo = useRestaurantMenu(resId);
 
   if (resInfo === null) {
@@ -23,14 +21,15 @@ const RestaurantMenu = () => {
   }
 
   const { name, cuisines, locality, cloudinaryImageId } =
-    resInfo?.cards[0]?.card?.card?.info;
+    resInfo?.cards[2]?.card?.card?.info;
 
   const categoryFiltered =
-    resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (c) =>
         c?.card?.card?.["@type"] ===
         "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
+  
 
   return (
     <div id="menu">

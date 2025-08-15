@@ -1,7 +1,8 @@
 const CDN_URL =
   "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
+      //Change Here for Swiggy Main Page Cards or Restaurants
 const HOME_PAGE_URL =
-  "/dapi/restaurants/list/v5?lat=28.6028557&lng=77.08198850000001&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+  "/swiggy-api";
 
 export { CDN_URL, HOME_PAGE_URL };

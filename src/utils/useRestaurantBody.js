@@ -13,8 +13,10 @@ const useRestaurantBody = () => {
     const json = await data.json();
 
     const filterData = await json?.data?.cards?.filter((item) => {
-      return item?.card?.card.id === "restaurant_grid_listing";
+      //Change Here for Swiggy Main Page Cards or Restaurants
+      return item?.card?.card.id === "restaurant_grid_listing_v2";
     });
+    
 
     setListOfRestaurants(
       filterData[0]?.card?.card?.gridElements?.infoWithStyle?.restaurants

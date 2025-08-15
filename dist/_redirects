@@ -1,2 +1,3 @@
 /dapi/restaurants/list/v5/*  https://www.swiggy.com/dapi/restaurants/list/v5/:splat  200
 /dapi/menu/pl/*  https://www.swiggy.com/dapi/menu/pl/:splat  200
+/swiggy-api https://swiggy-api-4c740.web.app/swiggy-api.json 200
